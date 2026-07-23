@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://docs.aside.com/help/developers.md
+server:
+  name: aside
+  transport: stdio
+  command: aside
+  args:
+    - mcp
+description: >-
+  Aside ships a first-party Model Context Protocol server exposed through its CLI (`aside mcp`).
+  Any MCP-capable agent or coding tool can connect to it to drive the Aside AI browser as a
+  browser-automation surface. Launched over stdio via the locally installed `aside` binary
+  (see cli/aside-cli.yml and packages/aside-packages.yml for installation).
+client_config:
+  mcp_json:
+    mcpServers:
+      aside:
+        command: aside
+        args:
+          - mcp
+    note: >-
+      For clients that support mcp.json. If Developer settings report a concrete CLI path, use
+      that absolute path for `command`.
+tools: []
+tools_note: >-
+  The published tool list is not enumerated in the public docs; Aside also installs browser-automation
+  setup for supported coding tools. No fabricated tool inventory is recorded here.
+requires:
+  - The Aside CLI installed locally (curl -fsSL https://releases.aside.com/install.sh | bash).

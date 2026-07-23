@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+host: https://aside.com
+note: >-
+  Probed the standard /.well-known/ discovery surface on aside.com and docs.aside.com. No
+  documents were served (all 404). Recorded as valid negative results; no raw files saved and no
+  WellKnown/SecurityTxt pointer wired.
+documents:
+  - path: /.well-known/security.txt
+    host: https://aside.com
+    status: 404
+  - path: /.well-known/security.txt
+    host: https://docs.aside.com
+    status: 404
+  - path: /.well-known/openid-configuration
+    host: https://aside.com
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    host: https://aside.com
+    status: 404
+  - path: /.well-known/api-catalog
+    host: https://aside.com
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    host: https://aside.com
+    status: 404

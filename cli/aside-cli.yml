@@ -1,0 +1,43 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.aside.com/help/developers.md
+name: Aside CLI
+binary: aside
+summary: >-
+  First-party command-line interface for the Aside AI browser. Starts and resumes browser-agent
+  sessions from the terminal, manages multiple signed-in accounts, exposes an MCP server, and a
+  browser-automation REPL. The binary itself is catalogued in packages/aside-packages.yml.
+install:
+  - method: script
+    command: curl -fsSL https://releases.aside.com/install.sh | bash
+    note: Developer settings page can also install, update, or reinstall the CLI directly.
+commands:
+  - group: session
+    description: Start or continue a browser-agent session from the terminal.
+    examples:
+      - aside "Open localhost:3000 and run a smoke test"
+      - aside --session <session-id> "Continue"
+  - group: exec
+    description: Run a one-off task, optionally selecting a model or account.
+    examples:
+      - aside exec --account u1 -m openai-codex/gpt-5.5 "Plan this workflow"
+  - group: account
+    description: Inspect, switch, and target the accounts available on this device (current marked with *).
+    examples:
+      - aside account list
+      - aside account status
+      - aside account status u1
+      - aside account use u1
+    flags:
+      - name: --account <id>
+        description: Target a single run at a specific account (works on `aside` and `aside exec`).
+  - group: mcp
+    description: Connect Aside to another agent or coding tool as a Model Context Protocol server.
+    examples:
+      - aside mcp
+  - group: repl
+    description: Browser-automation REPL for direct page inspection, screenshots, downloads, and deterministic browser steps.
+    examples:
+      - aside repl "const p = await openTab('https://example.com')"
+notes:
+  - Built-in Aside models require an active sign-in; bring-your-own provider keys (OpenAI, Anthropic) keep working when signed out.

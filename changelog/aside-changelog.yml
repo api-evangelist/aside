@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.aside.com/changelog/native
+docs:
+  - https://docs.aside.com/changelog/native
+  - https://docs.aside.com/changelog/components
+scheme: build-version
+scheme_note: >-
+  Aside Browser publishes a versioned changelog using build-style version strings (e.g.
+  v1.0.714.1). A separate "Components" changelog tracks the in-browser Aside Components. The
+  public changelog does not attach calendar dates to entries, so `date` is left null rather than
+  fabricated.
+current_version: v1.0.714.1
+entries:
+  - version: v1.0.714.1
+    date: null
+    breaking: false
+    highlights:
+      - Added profile switching with Ctrl (^) + 1 through Ctrl (^) + 9.
+      - Duplicating a pinned tab now clearly opens the duplicate as a new tab.
+      - Fixed a crash when the cookie-controls modal closes and several tab-mode/profile-sync fixes.
+  - version: v1.0.713.3
+    date: null
+    breaking: false
+    highlights:
+      - 'New: Profile Switcher — switch profiles inside a single window (trackpad swipe / profile icon).'
+      - 'Hidden option to disable window background transparency (windowBackgroundVibrancyDisabled).'
+      - Bookmark drag UX aligned with tab drag experience; fixed a bookmark-drag crash.

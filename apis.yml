@@ -1,7 +1,28 @@
 aid: aside
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aside.png
 name: Aside
-description: Aside is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Aside is an AI-powered browser from a Y Combinator (Fall 2025) startup that runs an
+  autonomous browser agent to complete real work across the logged-in websites you already
+  use — email, dashboards, internal tools, documents, and spreadsheets — without relying on
+  per-service API integrations. It pairs browsing history used as local memory with the first
+  password manager designed for AI agents (hardware-backed encryption, audit logging), keeps
+  data local-first and end-to-end encrypted, and gates sensitive actions like payments and
+  messages behind human approval. For developers, Aside ships a command-line interface, a
+  Model Context Protocol (MCP) server, and a browser-automation REPL so other agents and
+  coding tools can drive the browser, plus bring-your-own-key support for OpenAI and Anthropic
+  models.
 url: https://raw.githubusercontent.com/api-evangelist/aside/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +32,63 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- AI Browser
+- Browser Agent
+- Automation
+- Model Context Protocol
+- MCP
+- CLI
+- Password Manager
+- Agentic
+- Web Automation
+- Developer Tools
+- Y Combinator
 apis: []
+common:
+- type: DomainSecurity
+  url: security/aside-domain-security.yml
+- type: Website
+  url: https://aside.com
+- type: Documentation
+  url: https://docs.aside.com
+- type: GettingStarted
+  url: https://docs.aside.com/help/get-started
+- type: Support
+  url: https://aside.com/community
+- type: Blog
+  url: https://aside.com/blog
+- type: Pricing
+  url: https://aside.com/pricing
+- type: TermsOfService
+  url: https://aside.com/policy/terms
+- type: PrivacyPolicy
+  url: https://aside.com/policy/privacy
+- type: ChangeLog
+  url: https://docs.aside.com/changelog/native
+- type: ChangeLog
+  name: Aside changelog (structured)
+  url: changelog/aside-changelog.yml
+- type: MCPServer
+  name: Aside MCP server
+  url: mcp/aside-mcp.yml
+- type: CLI
+  name: Aside CLI
+  url: cli/aside-cli.yml
+- type: Packages
+  name: Aside packages
+  url: packages/aside-packages.yml
+- type: LLMsTxt
+  url: llms/aside-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

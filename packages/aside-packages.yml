@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.aside.com/help/developers.md
+note: >-
+  Aside is a desktop AI browser; its only published distributable is the first-party CLI binary,
+  installed via a shell script. No first-party client-library SDKs are published on npm, PyPI,
+  Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist, or crates.io (Aside is not a REST-API
+  provider), so no `SDKs` pointer is emitted.
+packages:
+  - language: shell
+    registry: self-hosted
+    name: aside-cli
+    url: https://releases.aside.com/install.sh
+    install: curl -fsSL https://releases.aside.com/install.sh | bash
+    kind: cli
+    official: true
+    note: The `aside` command-line binary; command surface catalogued in cli/aside-cli.yml.
