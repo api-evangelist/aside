@@ -1,26 +1,26 @@
 generated: '2026-07-18'
 method: searched
 host: https://aside.com
-note: >-
-  Probed the standard /.well-known/ discovery surface on aside.com and docs.aside.com. No
-  documents were served (all 404). Recorded as valid negative results; no raw files saved and no
-  WellKnown/SecurityTxt pointer wired.
-documents:
+note: Probed the standard /.well-known/ discovery surface on aside.com and docs.aside.com. No documents
+  were served (all 404). Recorded as valid negative results; no raw files saved and no WellKnown/SecurityTxt
+  pointer wired.
+hosts:
+- host: https://aside.com
+  documents:
   - path: /.well-known/security.txt
-    host: https://aside.com
     status: 404
   - path: /.well-known/security.txt
-    host: https://docs.aside.com
     status: 404
   - path: /.well-known/openid-configuration
-    host: https://aside.com
     status: 404
   - path: /.well-known/oauth-authorization-server
-    host: https://aside.com
     status: 404
   - path: /.well-known/api-catalog
-    host: https://aside.com
     status: 404
   - path: /.well-known/ai-plugin.json
-    host: https://aside.com
     status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
